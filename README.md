@@ -1,10 +1,11 @@
 # SenseCAP-M1-Helium-Gateway-to-TTN
-Contains configurations file and my learnings for Australians (AS923 only at this stage) performing the Seeed SenseCAP M1 Helium gateway conversion to The Things Network TTN basic station.
+Contains configurations file and my learnings for Australians (AS923 only at this stage) performing the Seeed SenseCAP M1 Helium gateway (WM1302 SPI LoRaWAN Module) conversion to The Things Network TTN basic station.
 
 Follow the guide here: https://github.com/seeed-lora/WM1302-doc for conerting your SenseCAP M1 Helium gateway to a TTN gateway.
-For what it's worth, I used a new microSD card in my SenseCAP M1 gateway and used the standard Raspberry Pi Imager from here: https://www.raspberrypi.com/software/ and did a "Raspberry Pi OS (other)" -> "Raspberry Pi OS Lite (64-bit)" image from that app's menu. I set my WiFi and enabled SSH using this tool also.
 
-My SenseCAP M1 (and I suspect most) uses the WM1302 SPI LoRaWAN Module.
+For what it's worth:
+*I used a new microSD card in my SenseCAP M1 gateway and used the standard Raspberry Pi Imager from here: https://www.raspberrypi.com/software/ and did a "Raspberry Pi OS (other)" -> "Raspberry Pi OS Lite (64-bit)" image from that app's menu. 
+*I set my WiFi and enabled SSH using this tool also.
 
 If you're an Australian user, here's what you need to do:
 When performing the **nano tools/reset_lgw.sh** edits at Step 4 (https://github.com/seeed-lora/WM1302-doc#step4-run-semtech-sx1302-packet-forwarder), my GPIO changes looked like this to work:

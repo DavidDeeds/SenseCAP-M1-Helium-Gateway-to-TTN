@@ -8,6 +8,7 @@ My SenseCAP M1 (and I suspect most) uses the WM1302 SPI LoRaWAN Module.
 
 If you're an Australian user, here's what you need to do:
 When performing the **nano tools/reset_lgw.sh** edits at Step 4 (https://github.com/seeed-lora/WM1302-doc#step4-run-semtech-sx1302-packet-forwarder), my GPIO changes looked like this to work:
+
 `SX1302_RESET_PIN=**17**     # SX1302 reset
 SX1302_POWER_EN_PIN=18  # SX1302 power enable
 SX1261_RESET_PIN=**5**     # SX1261 reset (LBT / Spectral Scan)

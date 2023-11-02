@@ -20,9 +20,10 @@ AD5338R_RESET_PIN=13    # AD5338R reset (full-duplex CN490 reference design)
 Further down in Step 4 of that guide, when it comes to editing the global_conf.json.sx1250.xxxx files, do the following instead:
 
 2. In the **~/sx1302_hal/packet_forwarder $**  directory, do a **cp global_conf.json.sx1250.AS923.USB global_conf.json.sx1250.AS923** command. This will copy/create a new file that we can use to copy the contents of my file in this repo into.
-3. Open my **global_conf.json.sx1250.AS923** file in Notepad++, edit the "gateway_ID": "**YOURGATEWAYEUIHERE**" to be the new EUI created with https://descartes.co.uk/CreateEUIKey.html (same EUI you will be manually setting in the TTN console). You don't have to change the default server address/ports etc. as I have that already set in my conf file for the Australian TTN broker. 
-4 . When it comes to starting the lora packet forwarder, your command will be **./lora_pkt_fwd -c global_conf.json.sx1250.AS923**
-5. You may also need to do a **./reset_lgw.sh** start if things don't work as expected at this stage.
+3. Open my **global_conf.json.sx1250.AS923** file in Notepad++, edit the "gateway_ID": "**YOURGATEWAYEUIHERE**" to be the new EUI created with https://descartes.co.uk/CreateEUIKey.html (same EUI you will be manually setting in the TTN console). You don't have to change the default server address/ports etc. as I have that already set in my conf file for the Australian TTN broker.
+4. Copy the whole contents of this from Notepad++ into the global_conf.json.sx1250.AS923 in your SenseCAP M1 gateway. Write it out to save it.
+5. When it comes to starting the lora packet forwarder, your command will be **./lora_pkt_fwd -c global_conf.json.sx1250.AS923**
+6. You may also need to do a **./reset_lgw.sh** start if things don't work as expected at this stage.
 
 Other:
 I have seen comments in the thethingsnetwork.org forums indicating that you can download the global.conf and I guess "use that". The problem is that this file from TTN console doesn't contain what's needed for the _lora_pkt_fwd_ service to initialise the SPI interface. Maybe I'm missing something - who knows.. 

@@ -27,4 +27,5 @@ Further down in Step 4 of that guide, when it comes to editing the global_conf.j
 
 
 Other:
-I have seen comments in the thethingsnetwork.org forums indicating that you can download the global.conf and I guess "use that". The problem is that this file from TTN console doesn't contain what's needed for the _lora_pkt_fwd_ service to initialise the SPI interface. Maybe I'm missing something - who knows.. 
+* I have seen comments in the thethingsnetwork.org forums indicating that you can download the global.conf and I guess "use that". The problem is that this file from TTN console doesn't contain what's needed for the _lora_pkt_fwd_ service to initialise the SPI interface. Maybe I'm missing something - who knows..
+* One day I might do the AU915 version of this. I'm happy for someone else to and I can test :) 
